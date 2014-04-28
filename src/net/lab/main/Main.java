@@ -26,7 +26,6 @@ public class Main {
 						e.printStackTrace();
 					}
 				
-				//View lview = new View();
 					ViewPort vp = new ViewPort();
 					
 			}

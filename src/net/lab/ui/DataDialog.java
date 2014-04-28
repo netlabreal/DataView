@@ -93,6 +93,8 @@ public class DataDialog extends JDialog {
 		nachf = new JTextField(10);
 		p.add(nachf,new GridBagConstraints(1,2,1,1,1,1,GridBagConstraints.WEST,GridBagConstraints.BOTH,new Insets(2, 125, 2, 2),0,0));
 		
+		int kj = 1;
+		
 		JLabel OplLabel = new JLabel("Оплачено: ");
 		p.add(OplLabel,new GridBagConstraints(1,3,1,1,1,1,GridBagConstraints.WEST,GridBagConstraints.HORIZONTAL,new Insets(2, 2, 2, 2),0,0));
 		oplf = new JTextField(10);
