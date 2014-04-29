@@ -10,7 +10,9 @@ public class Main {
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-					ViewPort vp = new ViewPort();
+					@SuppressWarnings("unused")
+					ViewPort vp = null;
+					vp = new ViewPort();
 			}
 		});
 	}

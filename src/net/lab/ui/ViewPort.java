@@ -3,18 +3,12 @@ package net.lab.ui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.FocusTraversalPolicy;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowFocusListener;
 import java.util.Vector;
 
-import javax.swing.JApplet;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,7 +20,6 @@ import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -37,9 +30,6 @@ import javax.swing.plaf.metal.MetalIconFactory;
 import net.lab.util.DataManagementSystem;
 import net.lab.util.DataModel;
 import net.lab.util.DataTableModel;
-import net.lab.util.DataTableModelListener;
-import net.lab.util.DataTableMouseListener;
-import net.lab.util.ThreadSearch;
 
 public class ViewPort extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -140,7 +130,8 @@ public class ViewPort extends JFrame {
 						progress.setMaximum(dtm.getRowCount());
 						try {
 							for (int i = 0; i < dtm.getRowCount(); i++) {
-								Thread.currentThread().sleep(1);
+								Thread.currentThread();
+								Thread.sleep(1);
 								System.out.println(dtm.getValueAt(i, 0));
 								progress.setValue(i);
 							}
@@ -200,9 +191,7 @@ public class ViewPort extends JFrame {
 				tt = new JTable(ReturnData());
 				//tt.setFocusable(false);
 
-				tt.getModel().addTableModelListener(new DataTableModelListener(tt));
 				tt.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-				tt.addMouseListener(new DataTableMouseListener(tt));
 				tt.setRowSelectionInterval(1,1);
 				//tt.setFocusable(true);
 				//tt.requestFocus();
@@ -301,8 +290,8 @@ public class ViewPort extends JFrame {
 		        info.kvf.setText((String) tt.getValueAt(selectedRow, 2));
 		        info.lsf.setText((String) tt.getValueAt(selectedRow, 3).toString());
 		        info.ff.setText((String) tt.getValueAt(selectedRow, 4));
-		        String dk = " д. "+tt.getValueAt(selectedRow, 1)+" кв. "+tt.getValueAt(selectedRow, 2);
-		        String fl = " лс. "+tt.getValueAt(selectedRow, 3)+" фио "+tt.getValueAt(selectedRow, 4);
+		        //String dk = " д. "+tt.getValueAt(selectedRow, 1)+" кв. "+tt.getValueAt(selectedRow, 2);
+		        //String fl = " лс. "+tt.getValueAt(selectedRow, 3)+" фио "+tt.getValueAt(selectedRow, 4);
 		        
 		        info.mf.setText((String) tt.getValueAt(selectedRow, 5).toString());
 		        info.vxf.setText((String) tt.getValueAt(selectedRow, 6).toString());

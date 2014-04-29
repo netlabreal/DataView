@@ -3,18 +3,12 @@ package net.lab.ui;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-
-import net.lab.util.DataModel;
-import net.lab.util.DataTableModel;
 
 public class InfoPanel extends JPanel{
 	
@@ -98,15 +92,6 @@ public class InfoPanel extends JPanel{
 		isxf.setEditable(false);		
 		add(isxf,new GridBagConstraints(2,4,1,1,1,1,GridBagConstraints.WEST,GridBagConstraints.BOTH,new Insets(2, 125, 2, 200),0,0));
 		
-		JButton bb = new JButton("Диалог");
-		bb.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				DataDialog dd = new DataDialog(ff1,(DataTableModel) t.getModel());
-				dd.setModal(true);dd.setVisible(true);
-			}
-		});
-		add(bb,new GridBagConstraints(3,0,1,1,1,1,GridBagConstraints.WEST,GridBagConstraints.HORIZONTAL,new Insets(2, 2, 2, 2),0,0));
 		//JLabel MLabel = new JLabel("");
 		//add(MLabel,new GridBagConstraints(3,0,1,1,1,1,GridBagConstraints.WEST,GridBagConstraints.HORIZONTAL,new Insets(2, 2, 2, 2),0,0));
 		//*************************************************//
