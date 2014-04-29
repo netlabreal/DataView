@@ -13,21 +13,7 @@ public class Main {
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-					DataManagementSystem dms=null;
-					try {
-						dms = DataManagementSystem.getInstance();
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-					
-					try {
-						System.out.println(dms.getInfo());
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
-				
 					ViewPort vp = new ViewPort();
-					
 			}
 		});
 	}
