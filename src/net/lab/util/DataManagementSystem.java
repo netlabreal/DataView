@@ -12,7 +12,6 @@ public class DataManagementSystem {
 private static DataManagementSystem instance;
 private static Connection conn;
 private String fullPath;
-
 private Statement stmt = null;
 private ResultSet rs = null;
 
@@ -93,7 +92,6 @@ public List<DataModel> getData(String s) throws SQLException{
 		if(rs==null){rs.close();}
 			conn.close();stmt.close();
 		}
-	
 	return ldm;
 }
 

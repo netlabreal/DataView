@@ -11,22 +11,20 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 public class InfoPanel extends JPanel{
+	private static final long serialVersionUID = 1L;
 	
 	public JFrame ff1;
 	public JTable t;
-	private static final long serialVersionUID = 1L;
 	public JTextField streetf;
 	public JTextField domf;
 	public JTextField kvf;
 	public JTextField lsf;
 	public JTextField ff;
-	
 	public JTextField mf;
 	public JTextField vxf;
 	public JTextField nachf;
 	public JTextField oplf;
 	public JTextField isxf;
-	
 	
 	public InfoPanel(){
 		setLayout(new GridBagLayout());
@@ -91,15 +89,5 @@ public class InfoPanel extends JPanel{
 		isxf = new JTextField(10);
 		isxf.setEditable(false);		
 		add(isxf,new GridBagConstraints(2,4,1,1,1,1,GridBagConstraints.WEST,GridBagConstraints.BOTH,new Insets(2, 125, 2, 200),0,0));
-		
-		//JLabel MLabel = new JLabel("");
-		//add(MLabel,new GridBagConstraints(3,0,1,1,1,1,GridBagConstraints.WEST,GridBagConstraints.HORIZONTAL,new Insets(2, 2, 2, 2),0,0));
-		//*************************************************//
-		
 	}
-
-	public void setData(String s){
-		streetf.setText(s);
-	}
-	
 }

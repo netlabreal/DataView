@@ -10,10 +10,8 @@ public class DataTableModel extends AbstractTableModel{
 	private static final long serialVersionUID = 1L;
 	private Vector<DataModel> dataarray;
 	private int ColumnCount = 10;
-	
 	private int selectedId=0;
 	private int selectedRow=0;
-	
 	
 	public DataTableModel(Vector<DataModel> d){
 		dataarray = d;
@@ -32,7 +30,6 @@ public class DataTableModel extends AbstractTableModel{
 		case 7: return "Nach";
 		case 8: return "Opl";
 		case 9: return "IsxS";
-		
 		}
 		return null;
 	}
@@ -85,26 +82,20 @@ public class DataTableModel extends AbstractTableModel{
 		 DataModel rdm =  dataarray.get(arg0);
 		 return rdm.getId();
 	}
-
 	public int getSelectedId() {
 		return selectedId;
 	}
-
 	public void setSelectedId(int selectedId) {
 		this.selectedId = selectedId;
 	}
-
 	public int getSelectedRow() {
 		return selectedRow;
 	}
-
 	public void setSelectedRow(int selectedRow) {
 		this.selectedRow = selectedRow;
 	}
-
 	public DataModel getRow(int num_row){
 		DataModel rdm =  dataarray.get(num_row);
 		return rdm;
 	}
-
 }
